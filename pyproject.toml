@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "fastapi-template-app"
+version = "0.1.0"
+description = ""
+authors = ["VladMerk <merkvladimir@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = "W291 E128 E122 F401"
+
+[tool.pytest.ini_options]
+addopts = "-sv -p no:cacheprovider"
+testpaths = ["tests"]
+
+[tool.isort]
+line_length = 100
+multi_line_output = 3
