@@ -1,6 +1,5 @@
 from typing import AsyncGenerator
 
-from db.base_class import Base
 from sqlalchemy.ext.asyncio import (
     AsyncEngine,
     AsyncSession,
@@ -8,7 +7,8 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine
 )
 
-from core.settings import settings
+from app.core.settings import settings
+from app.db.base_class import Base
 
 engine: AsyncEngine = create_async_engine(
     url=settings.DB_URL,
